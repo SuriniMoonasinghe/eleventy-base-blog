@@ -41,14 +41,40 @@
 			<a href="/" class="home-link">{{ metadata.title }}</a>
 
 			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
+			
+			<!-- Copying nav bar from bootstrap site -->
+
+			
+
+			
+			<nav class="navbar navbar-expand-md mb-4 py-0 border-bottom border-2 border-danger border-opacity-50">
+            <div class="container justify-content-center">
+                <h1 class="d-md-none  order-1"> Twisted Stitches </h1>
+                <a class="navbar-brand " href="#">
+                    <img src="Assets/Twisted Stitches Logo.png" alt="twisted stitches logo"  class="d-none d-md-block align-content-top" width="220" height="220">
+                </a> 
+            </div>
+            <div class="container">     
+                <!-- navbar -->                                      
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"> </span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-start" id="mainNavbar">
+					<ul class="nav navbar-nav text-start">
 				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+					<li class="nav-item"><a class="nav-link active border-bottom border-danger border-opacity-50 btn fs-5" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
 				</ul>
-			</nav>
+                </div>
+            </div>
+                         
+
+
+        </nav>
+
+
+
+
 		</header>
 
 		<main id="skip">
