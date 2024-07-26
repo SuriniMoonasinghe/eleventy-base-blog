@@ -34,50 +34,42 @@
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 	</head>
 	<body>
+		<div class="container-fluid"></div>
+			<a href="#skip" class="visually-hidden">Skip to main content</a>
 	
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
+			<header class="d-flex justify-content-center">
+				<a href="/" class="home-link">{{ metadata.title }}</a>
 
-		<header class="d-flex justify-content-center">
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+				{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+				
 
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+				<nav class="navbar navbar-expand-md pb-3 border-bottom border-2 border-danger border-opacity-50">                  
+					<div class="container">     
+						<!-- navbar -->                                      
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"> </span>
+						</button>
+						<div class="collapse navbar-collapse justify-content-start" id="mainNavbar">
+							<ul class="nav navbar-nav text-start">
+						{%- for entry in collections.all | eleventyNavigation %}
+							<li class="nav-item"><a class="nav-link active border-bottom border-danger border-opacity-50 btn fs-5" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+						{%- endfor %}
+						</ul>
+						</div>
+					</div>
+								
+				</nav>	
+			</header>		
+
+	
 			
-			<!-- Copying nav bar from bootstrap site -->
-
-			
-
-	<div class="container-fluid">
-			<nav class="navbar navbar-expand-md pb-3 border-bottom border-2 border-danger border-opacity-50">                  
-            <div class="container">     
-                <!-- navbar -->                                      
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"> </span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-start" id="mainNavbar">
-					<ul class="nav navbar-nav text-start">
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a class="nav-link active border-bottom border-danger border-opacity-50 btn fs-5" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
-				</ul>
-                </div>
-            </div>
-                         
-
-
-        </nav>
-
-
-
-
-		</header>
+			<main id="skip">
 		
-		<main id="skip">
+							{{ content | safe }}
+		
+			</main>
 	
-						{{ content | safe }}
-	
-		</main>
-	
-	 </div>	
+	 	</div>	
 
 		<footer></footer>
 
