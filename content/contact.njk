@@ -7,8 +7,8 @@ numberOfLatestPostsToShow: 3
 ---
 
 <!-- foreword -->
-<div class="mb-2">
-  <h1> Contact Page</h1>
+<div class="mb-4">
+  <h1 class="mb-2"> Contact Page</h1>
   <p> If you want to get in contact, we'd love to hear from you! Please fill out the form below, and we'll be in touch.</p>
 </div>
 
@@ -35,21 +35,22 @@ numberOfLatestPostsToShow: 3
         </div>
 
         <div class="row mb-2"> <!-- row 2: email -->
-          <div class="form-floating ">
+          <div class="form-floating">
             <input type="email" class="form-control" id="email" name="email" required placeholder="email">
-            <label for="email">Email Address</label>
+            <label for="email" class="ms-2">Email Address</label>
           </div>
         </div>
         
         <div class="row mb-2"> <!-- row 3: user comment -->
-          <div class="form-floating ">
+          <div class="form-floating">
             <textarea name="userMessage" class="form-control" id="userMessage" required placeholder="Message" style="height: 100px;"></textarea>
-            <label for="userMessage"> Message Body </label>
+            <label for="userMessage" class="ms-2"> Message Body </label>
           </div>
         </div>
 
-        <div class="row mb-2 justify-content-center">
-          <div class="col-sm-6" >
+          <!-- submit button needs to be placed properly -->
+        <div class="row mb-2 ">
+          <div class="col-sm-6 justify-content-center" >
             <input type="submit">
           </div>
 
