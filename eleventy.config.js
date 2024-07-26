@@ -11,6 +11,18 @@ const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
 
 module.exports = function(eleventyConfig) {
+	// Copy `assets` directory to `_site/assets`
+	eleventyConfig.addPassthroughCopy("./assets");
+  
+	return {
+	  dir: {
+		input: "assets",
+		output: "_site"
+	  }
+	};
+  };
+
+module.exports = function(eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy({
@@ -96,6 +108,7 @@ module.exports = function(eleventyConfig) {
 		return (new Date()).toISOString();
 	})
 
+	
 	// Features to make your build faster (when you need them)
 
 	// If your passthrough copy gets heavy and cumbersome, add this line
