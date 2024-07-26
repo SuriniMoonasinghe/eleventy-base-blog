@@ -16,19 +16,55 @@ numberOfLatestPostsToShow: 3
   <form action="#"> <!-- form -->
     <fieldset>
       <legend> Get in touch</legend>
-      <label for="firstName"> First Name</label>
-      <input type="text" id="firstName" name="firstName" required >
+        <div class="row g-2"> <!-- row 1: first name and last name -->
 
-      <label for="lastName"> Last Name</label>
-      <input type="text" id="lastName" name="lastName" required>
+          <div class="col-md"> <!-- first name -->
+            <div class="form-floating mb-1 ">
+              <input type="text" class="form-control" id="firstName" placeholder="Jane">
+              <label for="firstName">First Name</label>
+            </div>
+          </div>
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
+          <div class="col-md"> <!-- last name -->
+            <div class="form-floating mb-1 ">        
+              <input type="text" class="form-control" id="lastName" name="lastName" required placeholder="e.g Doe">
+              <label for="lastName"> Last Name</label>
+            </div>
+          </div>
 
-      <label for="userMessage"> Message Body </label>
-      <textarea name="userMessage" id="userMessage" required placeholder="Please enter your message here."></textarea>
+        </div>
 
-      <input type="submit">
+        <div class="row"> <!-- row 2: email -->
+          <div class="form-floating mb-1 ">
+            <input type="email" class="form-control" id="email" name="email" required placeholder="e.g name@email.co.uk">
+            <label for="email">Email Address</label>
+          </div>
+        </div>
+        
+        <div class="row"> <!-- row 3: user comment -->
+          <div class="form-floating mb-1 ">
+            <textarea name="userMessage" class="form-control" id="userMessage" required placeholder="Please enter your message here." style="height: 100px;"></textarea>
+            <label for="userMessage"> Message Body </label>
+          </div>
+        </div>
+
+        <div>
+          <input type="submit">
+        </div>
+        
     </fieldset>
   </form>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
