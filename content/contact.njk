@@ -8,20 +8,20 @@ numberOfLatestPostsToShow: 3
 
 
 
-<div class="container">
+<div class="container d-flex flex-column ">
 
   <div class="mb-4"> <!-- intro -->
-    <div class="row">
-      <div class="col-lg-7 text-md-center">
-        <h1 class="mb-2"> Contact Page</h1>
-        <p> If you want to get in contact, we'd love to hear from you! Please fill out the form below, and we'll be in touch.</p>
+    <div class="row justify-content-center">
+      <div class="col-lg-7 ">
+        <h1 class="mb-2 text-md-center"> Contact Page</h1>
+        <p > If you want to get in contact, we'd love to hear from you! Please fill out the form below, and we'll be in touch.</p>
       </div>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row justify-content-center"> <!-- form -->
     <div class="col-lg-7">
-      <form name="contact" id="contact" method="POST" data-netlify="true"> <!-- form -->
+      <form name="contact" id="contact" method="POST" data-netlify="true"> 
         <fieldset>
           <legend class="text-md-center"> Get in touch</legend>
             <div class="row mb-2"> <!-- row 1: first name and last name -->
@@ -56,10 +56,10 @@ numberOfLatestPostsToShow: 3
               </div>
             </div>
     
-              <!-- submit button needs to be placed properly -->
-            <div class="row mb-2 "> <!-- submit button -->
+             
+            <div class="row mb-2 justify-content-center "> <!-- submit button -->
               <div class="col-md-2">
-                <input type="submit">
+                <input type="submit" class="btn btn-lg btn-danger">
               </div>
             </div>
     
