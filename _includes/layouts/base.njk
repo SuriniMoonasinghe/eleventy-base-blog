@@ -38,28 +38,27 @@
 			<a href="#skip" class="visually-hidden">Skip to main content</a>
 	
 			<header>
-				
+				<div class="container justify-content-center">
+					<nav class="navbar navbar-expand-md border-bottom border-2 border-danger border-opacity-50">                  
+						<div class="container>     
+							<a href="/" class="home-link ">{{ metadata.title }}</a>
 
-				<nav class="navbar navbar-expand-md border-bottom border-2 border-danger border-opacity-50">                  
-					<div class="container justify-content-center">     
-						<a href="/" class="home-link ">{{ metadata.title }}</a>
-
-						{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-				
-						<!-- navbar -->                                      
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"> </span>
-						</button>
-						<div class="collapse navbar-collapse justify-content-start" id="mainNavbar">
-							<ul class="nav navbar-nav text-start">
-						{%- for entry in collections.all | eleventyNavigation %}
-							<li class="nav-item"><a class="nav-link active border-bottom border-danger border-opacity-50 btn fs-5" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-						{%- endfor %}
-						</ul>
-						</div>
-					</div>
-								
-				</nav>	
+							{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+					
+							<!-- navbar -->                                      
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"> </span>
+							</button>
+							<div class="collapse navbar-collapse justify-content-start" id="mainNavbar">
+								<ul class="nav navbar-nav text-start">
+							{%- for entry in collections.all | eleventyNavigation %}
+								<li class="nav-item"><a class="nav-link active border-bottom border-danger border-opacity-50 btn fs-5" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+							{%- endfor %}
+							</ul>
+							</div>
+						</div>					
+					</nav>	
+				</div>				
 			</header>		
 
 	
