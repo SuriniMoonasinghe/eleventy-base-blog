@@ -50,7 +50,7 @@
 							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"> </span>
 							</button>
-							<div class="collapse navbar-collapse justify-content-start" id="mainNavbar">
+							<div class="collapse navbar-collapse " id="mainNavbar">
 								<ul class="nav navbar-nav text-start">
 									{%- for entry in collections.all | eleventyNavigation %}
 									<li class="nav-item"><a class="nav-link active border-bottom border-danger border-opacity-50 btn fs-5" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
