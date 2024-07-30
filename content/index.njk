@@ -12,7 +12,7 @@ numberOfLatestPostsToShow: 3
 		<div class="col-lg-7">
 			{% set postsCount = collections.posts | length %}
 			{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-			<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+			<h1 class="text-md-center">Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
 
 			{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 			{% set postslistCounter = postsCount %}
@@ -25,7 +25,7 @@ numberOfLatestPostsToShow: 3
 
 			{# List every content page in the project #}
 			{#
-			<ul>
+			<ul class="ps-5">
 				{%- for entry in collections.all %}
 				<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
 				{%- endfor %}
