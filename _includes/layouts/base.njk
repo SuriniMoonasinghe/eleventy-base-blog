@@ -38,69 +38,30 @@
 			<a href="#skip" class="visually-hidden">Skip to main content</a>
 	
 			<header>
-				<div class="container d-flex justify-content-md-center justify-content-between">
+				<div class="container d-flex justify-content-center">
 					<nav class="navbar navbar-expand-md border-bottom border-2 border-danger border-opacity-50">                  
-						<div>
+						<div class="container>     
 							<a href="/" class="home-link ">{{ metadata.title }}</a>
 
 							{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-						</div>
-						<div class="container >     
-				                              
+					
+							<!-- navbar -->                                      
 							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"> </span>
 							</button>
-							<div class="collapse navbar-collapse " id="mainNavbar">
+							<div class="collapse navbar-collapse justify-content-start" id="mainNavbar">
 								<ul class="nav navbar-nav text-start">
-									{%- for entry in collections.all | eleventyNavigation %}
-									<li class="nav-item"><a class="nav-link active border-bottom border-danger border-opacity-50 btn fs-5" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-									{%- endfor %}
-								</ul>
+							{%- for entry in collections.all | eleventyNavigation %}
+								<li class="nav-item"><a class="nav-link active border-bottom border-danger border-opacity-50 btn fs-5" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+							{%- endfor %}
+							</ul>
 							</div>
 						</div>					
 					</nav>	
 				</div>				
 			</header>		
 
-	        <nav class="navbar navbar-expand-md mb-4 py-0 border-bottom border-2 border-danger border-opacity-50">
-            <div class="container justify-content-center">
-                <h1 class="d-md-none  order-1"> Twisted Stitches </h1>
-                <a class="navbar-brand " href="#">
-                    <img src="Assets/Twisted Stitches Logo.png" alt="twisted stitches logo"  class="d-none d-md-block align-content-top" width="220" height="220">
-                </a> 
-            </div>
-            <div class="container">     
-                <!-- navbar -->                                      
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"> </span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-start" id="mainNavbar">
-                    <ul class="navbar-nav text-start ">
-                        <li class="nav-item me-3">
-                            <a class="nav-link active border-bottom border-danger border-opacity-50 btn fs-5" type="button" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a href="#about" class="nav-link border-bottom border-danger border-opacity-50 btn fs-5" type="button">About</a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a href="#shop" class="nav-link border-bottom border-danger border-opacity-50 btn fs-5" type="button"> Shop </a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a href="#FAQ" class="nav-link border-bottom border-danger border-opacity-50 btn fs-5" type="button">FAQ</a>
-                        
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a href="#contact" class="nav-link border-bottom border-danger border-opacity-50 btn fs-5" type="button">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-
-               
-
-
-        </nav>
+	
 			
 			<main id="skip" class="pt-4">
 		
