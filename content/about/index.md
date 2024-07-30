@@ -4,9 +4,7 @@ eleventyNavigation:
   key: About Me
   order: 3
 ---
-# About Me
 
-I am a person that writes stuff.
 
 <div class="container d-flex flex-column">
   <div class="row justify-content-center "> <!-- 1st row -->
