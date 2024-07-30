@@ -30,11 +30,18 @@ numberOfLatestPostsToShow: 3
 
 			{# List every content page in the project #}
 			{#
-			<ul>
-				{%- for entry in collections.all %}
-				<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-				{%- endfor %}
-			</ul>
+				<div class="container d-flex flex-column">
+					<div class="row justify-content-center">
+						<div class="col-lg-7">
+							<ul class="ps-5 ms-4">
+								{%- for entry in collections.all %}
+								<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
+								{%- endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
+
 			#}
 		</div>		
 	</div>
